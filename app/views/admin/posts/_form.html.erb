@@ -1,0 +1,8 @@
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title %>
+  <%= f.input :body %>
+  <%= f.input :meta_desc %>
+  <%= f.input :meta_keys %>
+  <%= f.association :author, as: :radio_buttons %>
+  <%= f.button :submit %>
+<% end %>

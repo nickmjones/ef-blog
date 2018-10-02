@@ -1,0 +1,16 @@
+@import 'https://ef-mktg-assets.s3.amazonaws.com/fonts.css';
+@import 'colors';
+@import 'components/header';
+
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.content {
+  padding: 2rem;
+}
