@@ -1,0 +1,92 @@
+// Footer
+// ---------------------------------------------------------------
+footer {
+  background: $color_dkblue;
+  font-family: $header-book-font;
+
+  .content {
+    padding: 2rem 0;
+
+    @include for-tablet-portrait-up {
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  .sections {
+    display: flex;
+
+    @include for-phone-only {
+      display: block;
+    }
+  }
+
+  .sections__item {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .ef-logo-footer {
+    fill: $color_slate;
+  }
+
+  h5 {
+    color: $color_slate;
+    font-size: 100%;
+  }
+
+  p {
+    font-size: 90%;
+    color: darken($color_slate, 10%);
+    margin: .8rem 0 0 0;
+  }
+
+  a {
+    font-size: 90%;
+    display: block;
+    line-height: 1.35;
+  }
+
+  ul.social {
+    float: right;
+  }
+
+  ul.social li {
+    float: left;
+    margin: 0 0 0 1rem;
+  }
+}
+
+.endmatter {
+  font-family: $header-book-font;
+  text-align: center;
+  color: darken($color_slate, 20%);
+  font-size: .8rem;
+  background: darken($color_dkslate, 10%);
+  padding: 1.5rem 0;
+}
+
+.endmatter p {
+  margin: 0;
+}
+
+.hearts {
+  color: $color_orange;
+}
+
+
+footer.lander {
+  background: $color_dkblue;
+  padding: $default-section-padding;
+
+  @include for-phone-only {
+    padding: $default-section-padding;
+  }
+}
+
+footer.lander p {
+  text-align: center;
+  font-family: $header_book_font;
+  color: transparentize(white, 0.6);
+  margin-bottom: 0;
+}

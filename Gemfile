@@ -18,6 +18,9 @@ gem 'redcarpet'
 gem 'react-rails'
 gem 'webpacker'
 gem 'simple_form'
+gem 'stamp'
+gem 'font-awesome-rails'
+gem 'pg_search'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -1,0 +1,20 @@
+@mixin center-rel {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-abs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin panel-appearance {
+  border: 1px solid $color_slate;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px transparentize($color_dkslate, 0.7);
+  transition: all 0.20s ease-in-out;
+}

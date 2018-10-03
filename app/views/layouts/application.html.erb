@@ -13,9 +13,10 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= react_component "Header" %>
+    <%= react_component "Header", img_src: image_url('logo.svg')%>
     <div class="content">
       <%= yield %>
     </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>

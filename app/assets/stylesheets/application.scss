@@ -1,6 +1,8 @@
-@import 'https://ef-mktg-assets.s3.amazonaws.com/fonts.css';
-@import 'colors';
+@import 'core/core';
+@import 'blogadmin';
 @import 'components/header';
+@import 'components/footer';
+@import 'font-awesome';
 
 body {
   padding: 0;

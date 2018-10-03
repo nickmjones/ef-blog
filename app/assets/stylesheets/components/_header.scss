@@ -1,10 +1,21 @@
 header.main {
   background: $color_hblue;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 
-  ul li {
+  .navigation {
+  }
+  .navigation ul {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .navigation ul li {
+    flex: 1;
+    text-align: center;
     list-style: none;
-    display: inline;
-    margin-right: 1rem;
+    font-size: .8rem;
   }
 }

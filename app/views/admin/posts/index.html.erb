@@ -1,5 +1,17 @@
-<% if !@posts.empty? %>
-  <%= render @posts %>
-<% else %>
-  Sorry, no posts.
-<% end %>
+<table class="post-listings">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date Created</th>
+      <th class="centered">Published</th>
+      <th colspan="2" class="centered">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if !@posts.empty? %>
+      <%= render @posts %>
+    <% else %>
+      Sorry, no posts.
+    <% end %>
+  </tbody>
+</table>

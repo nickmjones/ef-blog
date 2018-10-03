@@ -4,12 +4,15 @@ class Header extends React.Component {
   render () {
     return (
       <header className="main">
-        <ul>
-          <li>Foo</li>
-          <li>Bar</li>
-          <li>Bat</li>
-          <li>Baz</li>
-        </ul>
+        <div class="navigation">
+          <img className="logo" src={this.props.img_src} />
+          <ul>
+            <li>Home</li>
+            <li>Featured Posts</li>
+            <li>Contact</li>
+            <li>Join The List</li>
+          </ul>
+        </div>
       </header>
     );
   }

@@ -1,1 +1,34 @@
-<%= render @post %>
+<%= content_for :meta_title, @post.title %>
+<%= content_for :meta_description, @post.meta_desc %>
+<% content_for :meta_keywords, "eventtech, event management, salesforce, pardot, cvent" %>
+
+<header class="post-header" role="heading">
+  <!-- get featured image-->
+  <% if @post.image.attached? %>
+    <%= image_tag @post.image, class: "post-header__image" %>
+  <% end %>
+</header>
+
+<section class="blogpost" role="article">
+
+  <article>
+    <div class="post-meta">
+      <h1>
+        <%= @post.title %>
+      </h1>
+      <h6>
+        <div class="tiny-avatar">
+          <%= image_tag get_author_avatar(@post.author_id, "32px") %>
+        </div>
+        <%= get_author_email(@post.author_id) %> &bullet; <%= distance_of_time_in_words(@post.updated_at, Time.now).humanize %> ago
+      </h6>
+    </div>
+    <%= markdown(@post.body).html_safe %>
+  </article>
+
+  <aside>
+    <div class="three-up">
+      <h6 class="glance">About The Author</h6>
+    </div>
+  </aside>
+</section>

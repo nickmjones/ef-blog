@@ -1,4 +1,22 @@
-<div>
-  <h1><%= link_to post.title, post %></h1>
-  <p><%= post.body %></p>
-</div>
+<tr>
+  <td>
+    <%= truncate(post.title, :length => 80, :omission => '...') %>
+  </td>
+  <td>
+    <%= post.created_at.stamp("March 9, 2011 9:00 PM") %>
+  </td>
+  <td class="centered">
+    <%= post.is_published ? '&checkmark;'.html_safe : '&times;'.html_safe %>
+  </td>
+  <td class="centered">
+    <%=link_to edit_admin_post_path(post) do %>
+      <%= fa_icon "edit" %>
+    <% end %>
+  </td>
+  <td class="centered">
+    <%= link_to edit_admin_post_path(post),
+            data: {:confirm => 'Are you sure?'}, :method => :delete do %>
+      <%= fa_icon "trash" %>
+    <% end %>
+  </td>
+</tr>

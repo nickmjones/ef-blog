@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+$body-font: 'Quattrocento', Georgia, Times, serif;
+$header-font: 'Circular-Pro-Medium', Helvetica, Arial, sans-serif;
+$header-book-font: 'Circular-Pro-Book', Helvetica, Arial, sans-serif;
+
+
+body {
+	font-family: $body-font;
+	color: $color_dkslate;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.27;
+	margin-bottom: 1.5rem;
+	font-family: $header-book-font;
+	font-weight: lighter;
+}
+
+h1 {
+	font-size: 3.815rem;
+	line-height: 1;
+	margin-bottom: 2rem;
+}
+h2 {
+	font-size: 3.052rem;
+	line-height: 1.15;
+	margin-bottom: 2rem;
+}
+h3 {
+	font-size: 2.441rem;
+	line-height: 1.15;
+	margin-bottom: 2rem;
+}
+h4 {
+	font-size: 1.953rem;
+	line-height: 1.15;
+	margin-bottom: 1rem;
+}
+h5 {
+	font-size: 1.563rem;
+	line-height: 1.15;
+	margin-bottom: 0.3rem;
+}
+h6 {
+	font-size: 1.25rem;
+	line-height: 1.15;
+	margin-bottom: 0.5rem;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.35;
+	margin-bottom: 1rem;
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+p em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+dl {
+	&:last-of-type {
+		margin: 0;
+	}
+	dt {
+		color: $color_blue;
+		font-family: $header_font;
+		margin: 0 0 0.3rem;
+		line-height: 1.45;
+	}
+	dd {
+		margin: 0;
+		line-height: 1.45;
+		color: $color_slate;
+		color: $color_slate;
+		font-size: 0.8rem;
+	}
+	dd.glyph {
+		float: left;
+		width: 1.5rem;
+		height: 1.5rem;
+		margin-right: 0.4rem;
+		img {
+			display: block;
+			margin: auto;
+			width: 1.5rem;
+		}
+	}
+}
+
+// Utilities
+// -----------------------
+
+.is-centered {
+	text-align: center;
+}
+
+.is-small {
+	font-size: 0.8rem;
+}
+
+.is-upcase {
+	text-transform: uppercase;
+}
+
+.is-highlight {
+	background: transparentize($color_yellow, 0.3);
+}
+
+.is-breaking {
+	display: block;
+}
+
+.is-slate {
+	color: $color_slate;
+}
+
+.is-spaced {
+	margin: 2rem 8rem;
+	@include for-phone-only {
+		margin: 2rem;
+	}
+}
+
+.has-underscore {
+	position: relative;
+	margin-bottom: 4rem;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 60px;
+		height: 8px;
+		background: $color_green;
+		bottom: -2rem;
+		left: 0;
+	}
+}
+
+// Heading types
+// -----------------------
+
+h6.eyebrow {
+	color: $color_blue;
+}
+
+
+// Other
+// -----------------------
+
+hr {
+	border: 0;
+	height: 1px;
+	background: $color_slate;
+	margin: 2rem 0;
+}
+
+a {
+	color: $color_blue;
+	transition: color 0.15s ease-in-out;
+	&:hover,
+	&:active {
+		color: $color_hblue;
+	}
+	&:visited {
+		color: $color_blue;
+	}
+	&:visited:hover {
+		color: $color_hblue;
+	}
+}
+
+ul.features {
+	margin-bottom: 2rem;
+	li {
+		margin-bottom: 0.7rem;
+		&:before {
+			content:"-";
+			margin-right: 0.7rem;
+		}
+	}
+}
+
+@keyframes typedjsBlink {
+	50% {
+		opacity: 0;
+	}
+}
+.typed-cursor {
+	animation: typedjsBlink 0.7s infinite;
+}
+
+// Legal
+
+ol.alpha {
+	list-style-type: upper-alpha;
+	li {
+		line-height: 1.45;
+		margin-bottom: 1rem;
+	}
+}
+ol.roman-inset {
+	list-style-type: lower-roman;
+	margin-left: 2rem;
+	li {
+		line-height: 1.45;
+	}
+}
+
+.severity {
+	background: #efefef;
+	padding: 2rem 2rem 1rem;
+	margin-bottom: 2rem;
+
+	p {
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		margin: 0 0 1rem 2rem;
+		li {
+			line-height: 1.26;
+			list-style-type: disc;
+		}
+	}
+}
+
+table.generic {
+	width: 100%;
+	margin-bottom: 1rem;
+	td {
+		padding: 1rem;
+	}
+	tr:nth-child(odd) td {
+		background: $color_putty;
+	}
+}
+
+table.generic tbody tr th {
+	font-weight: bold;
+	padding: 1rem;
+	background: $color_green;
+	text-align: left;
+}

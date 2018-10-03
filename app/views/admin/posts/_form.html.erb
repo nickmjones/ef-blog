@@ -1,8 +1,36 @@
-<%= simple_form_for @post do |f| %>
-  <%= f.input :title %>
-  <%= f.input :body %>
-  <%= f.input :meta_desc %>
-  <%= f.input :meta_keys %>
-  <%= f.association :author, as: :radio_buttons %>
-  <%= f.button :submit %>
+<%= simple_form_for [:admin, @post] do |f| %>
+  <div class="form-content">
+    <div class="form-content__col">
+      <%= f.input :title, label: false, placeholder: "Title", input_html: { class: 'post-title' } %>
+      <%= f.input :body, label: false, placeholder: "Post content...", input_html: { class: 'post-body' } %>
+    </div>
+
+    <div class="form-content__col">
+
+      <div class="form-content__col--sideitem">
+        <h6>Post Status</h6>
+        <%= f.input :is_published, as: :radio_buttons, label: "Make public? " %>
+      </div>
+
+      <div class="form-content__col--sideitem">
+        <h6>Featured Image</h6>
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+
+      <div class="form-content__col--sideitem">
+        <h6>Post Synopsis</h6>
+        <%= f.input :meta_desc, label: false, placeholder: "Add a description to this post for use by search engines.", input_html: { class: 'post-meta' } %>
+      </div>
+
+      <div class="form-content__col--sideitem">
+        <h6>Author Settings</h6>
+        <%= f.association :author, label_method: :email, :value_method => :id, label: false, :include_blank => false %>
+      </div>
+
+      <div class="form-content__col--sideitem borderless">
+        <%= f.button :submit %>
+      </div>
+    </div>
+  </div>
 <% end %>

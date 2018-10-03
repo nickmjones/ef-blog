@@ -1,0 +1,101 @@
+.demo-form {
+  padding: $default_section_padding;
+  width: 100%;
+  position: relative;
+  margin: 0 auto 2rem;
+  z-index: 20;
+  background: white;
+  border: 1px solid $color_putty;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px transparentize($color_dkslate, 0.7);
+  @include for-tablet-landscape-up {
+    width: 40vw;
+  }
+
+
+  // list common input types to pick up styling
+  // add more if needed
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  textarea {
+    display: block;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  input[type='submit'] {
+    width: 100%;
+  }
+
+  // style select/option elements
+  .styled-select select {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid $color_slate;
+    background: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: white asset-url('chevron.svg') right 8px center no-repeat;
+    background-size: 20px;
+    &:focus {
+      outline: 0;
+      border: 1px solid $color_blue;
+    }
+  }
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    border: 1px solid white;
+    border-bottom: 1px solid $color_slate;
+    background: white;
+    outline: 0;
+    position: relative;
+    transition: all 0.15s ease-in-out;
+    &:focus {
+      background: lighten($color_blue, 35%);
+      border: 1px solid white;
+      border-bottom: 1px solid $color_blue;
+    }
+  }
+  textarea {
+    min-height: 15rem;
+    font-size: 0.8rem;
+    border: 1px solid $color_slate;
+  }
+
+  label {
+    font-size: 0.8rem;
+    font-family: $header_font;
+  }
+
+  .rc-anchor {
+    min-width: 320px;
+    margin: auto;
+  }
+
+
+  .two-up {
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    padding: 2rem;
+    margin: auto;
+  }
+  .two-up--left,
+  .two-up--right {
+    padding: 1rem;
+  }
+  .two-up--left {
+    flex: 2;
+    padding-right: 2rem;
+  }
+  .two-up--right {
+    flex: 1;
+    padding: 0;
+    img {
+      float: right;
+    }
+  }
+}

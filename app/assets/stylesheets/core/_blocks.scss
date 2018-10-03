@@ -1,0 +1,152 @@
+.banner {
+	width: 100%;
+	background: $color_dkblue;
+	text-align: center;
+	font-family: $header-book-font;
+	color: transparentize(white, 0.1);
+	position: relative;
+	transition: all .5s ease-in-out;
+	display: none;
+	padding: 1rem;
+	p {
+		font-size: .85rem;
+		margin: 0;
+	}
+	a,
+	a:visited {
+		color: #fff;
+	}
+	a:hover {
+		color: transparentize(#fff, .6);
+	}
+	strong {
+		font-family: $header-font;
+	}
+	.closeBanner {
+		position: absolute;
+		top: 13px;
+		right: 12px;
+		color: $color_slate;
+		cursor: pointer;
+	}
+	&.collapsed {
+		margin-top: -3rem;
+	}
+	&.hidden {
+		display: none;
+	}
+	&.shown {
+		display: block;
+	}
+}
+.header-internal {
+	display: flex;
+	justify-content: center;
+	background-color: $color_dkslate;
+	padding: 4rem 2rem;
+	position: relative;
+
+	@include for-tablet-portrait-up {
+		padding: 2rem 8rem 3rem;
+	}
+
+	&.core-color {
+		background: $color_orange;
+		background-size: cover;
+	}
+	&.engage-color {
+		background: $color_hblue;
+		background-size: cover;
+	}
+	&.efx-color {
+		background: $color_green;
+		background-size: cover;
+	}
+}
+.header-internal--copy {
+	width: 100%;
+	background: transparent;
+	margin: 2rem 0;
+	@include for-tablet-portrait-up {
+		width: 60%;
+	}
+	text-align: center;
+	h6 {
+		color: transparentize(white, 0.6);
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+
+	h1 {
+		font-size: 2.441rem;
+		margin: 0;
+		line-height: 1.25;
+		color: white;
+	}
+}
+.page {
+	padding: $default-section-padding;
+}
+section.generic {
+	padding: $default-section-padding*3 $default-section-padding*6;
+	@include for-phone-only {
+		padding: $default-section-padding;
+	}
+}
+.integrations {
+	margin-bottom: 2rem;
+	img {
+		display: block;
+		margin: 2rem auto 0;
+		width: 800px;
+		pointer-events: none;
+		@include for-phone-only {
+			width: 100%;
+		}
+	}
+}
+
+.internal-hero {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+
+	img {
+		flex: 0;
+		height: 480px;
+		@include for-phone-only {
+			height: 300px;
+		}
+	}
+}
+
+img.responsive {
+	display: block;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+dl.image-w-caption {
+	display: block;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	dt {
+		margin: 0;
+		padding: 0;
+		img {
+			display: block;
+			width: 100%;
+			margin-bottom: 0;
+			object-fit: cover;
+		}
+	}
+	dd {
+		font-style: italic;
+		font-soze: 0.8rem;
+		padding: 0.5rem 0;
+		text-align: right;
+	}
+	&:first-of-type {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'fonts';
+@import 'colors';
+@import 'responsive';
+@import 'variables';
+@import 'mixins';
+@import 'type';
+@import 'blocks';
+@import 'forms';
+
+body {
+  * {
+    box-sizing: border-box;
+  }
+}
