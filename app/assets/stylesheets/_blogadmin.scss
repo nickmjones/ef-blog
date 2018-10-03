@@ -265,7 +265,12 @@ blockquote:after {
   width: 100%;
   overflow: hidden;
   margin-bottom: 1.25rem;
-  box-shadow: 0 15px 20px #d7d7d7;
+  box-shadow: 0 15px 40px #efefef;
+  border: 1px solid #efefef;
+
+  @include for-tablet-landscape-up {
+    width: 49%;
+  }
 
   h2 {
     font-size: 1.75rem;

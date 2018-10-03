@@ -10,7 +10,10 @@
   </head>
 
   <body class="admin-root">
-
+    <div class="messages">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <nav class="admin-nav">
       <div class="admin-nav__location">
         <%= form_tag(admin_posts_path, method: :get) do %>
@@ -19,7 +22,9 @@
         <% end %>
       </div>
       <div class="admin-nav__login">
-        <%= current_author.email %> (<%= link_to('Logout', destroy_author_session_path, method: :delete) %>)
+        <% if author_signed_in? %>
+          <%= current_author.email %> (<%= link_to('Logout', destroy_author_session_path, method: :delete) %>)
+        <% end %>
       </div>
     </nav>
 

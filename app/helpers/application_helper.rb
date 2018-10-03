@@ -5,9 +5,14 @@ module ApplicationHelper
     url = "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}&d=#{CGI::escape(default_url)}"
   end
 
-  def get_author_email(author_id)
+  def get_author_fullname(author_id)
     @author = Author.find_by_id(author_id)
-    return @author.email
+    return @author.full_name
+  end
+
+  def get_author_shortbio(author_id)
+    @author = Author.find_by_id(author_id)
+    return @author.shortbio
   end
 
   def get_author_avatar(author_id, size)

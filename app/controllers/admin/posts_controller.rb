@@ -1,5 +1,5 @@
 class Admin::PostsController < ApplicationController
-
+  before_action :authenticate_author!
   layout "admin"
 
   def index
@@ -28,7 +28,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.update(post_params)
       redirect_to admin_root_path, notice: "Post updated."
     else
@@ -37,7 +37,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @post.destroy
     redirect_to admin_root_path, notice: "Post removed."
   end
@@ -49,7 +49,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :meta_desc, :meta_keys, :slug, :search, :image, :author_id)
+    params.require(:post).permit(:title, :body, :meta_desc, :meta_keys, :slug, :search, :image, :author_id, :is_published)
   end
   
 end

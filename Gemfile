@@ -25,6 +25,12 @@ gem 'pg_search'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'database_cleaner'
+  gem 'guard'
+  gem 'guard-rails'
+  gem 'guard-puma'
+  gem 'guard-bundler'
+  gem 'guard-sass'
+  gem 'guard-livereload'
 end
 
 group :development do
@@ -36,6 +42,7 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-rails'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'

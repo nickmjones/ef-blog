@@ -20,7 +20,7 @@
         <div class="tiny-avatar">
           <%= image_tag get_author_avatar(@post.author_id, "32px") %>
         </div>
-        <%= get_author_email(@post.author_id) %> &bullet; <%= distance_of_time_in_words(@post.updated_at, Time.now).humanize %> ago
+        <%= get_author_fullname(@post.author_id) %> &bullet; <%= distance_of_time_in_words(@post.updated_at, Time.now).humanize %> ago
       </h6>
     </div>
     <%= markdown(@post.body).html_safe %>
@@ -29,6 +29,7 @@
   <aside>
     <div class="three-up">
       <h6 class="glance">About The Author</h6>
+      <%= markdown(get_author_shortbio(@post.author_id)).html_safe %>
     </div>
   </aside>
 </section>

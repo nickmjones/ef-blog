@@ -3,17 +3,23 @@ import PropTypes from "prop-types"
 class Header extends React.Component {
   render () {
     return (
-      <header className="main">
-        <div class="navigation">
-          <img className="logo" src={this.props.img_src} />
-          <ul>
-            <li>Home</li>
-            <li>Featured Posts</li>
-            <li>Contact</li>
-            <li>Join The List</li>
+      <React.Fragment>
+        <nav className="global">
+          <div className="logo">
+            <img src={this.props.img_src} />
+          </div>
+          <ul className="links">
+            <li><a href="http://www.eventfarm.com">About Us</a></li>
+            <li className="special"><a href="http://www.eventfarm.com/request-a-demo">Try Event Farm</a></li>
           </ul>
-        </div>
-      </header>
+        </nav>
+        <header className="main">
+          <div className="title">
+            <h3>The Check In</h3>
+            <h5>Thoughts about events, marketing, tech and whatever else draws our eye. Made by the people behind Event Farm.</h5>
+          </div>
+        </header>
+      </React.Fragment>
     );
   }
 }

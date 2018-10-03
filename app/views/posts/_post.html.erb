@@ -7,6 +7,7 @@
   <div class="post-grid__item--meta">
     <h6><%= post.created_at.stamp('July 1, 1999') %></h6>
     <h2><%= link_to post.title, post_path(post) %></h2>
+    <h6><%= get_author_fullname(post.author_id) %></h6>
     </h4>
   </div>
 </div>
