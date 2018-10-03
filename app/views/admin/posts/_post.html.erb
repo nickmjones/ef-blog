@@ -14,7 +14,7 @@
     <% end %>
   </td>
   <td class="centered">
-    <%= link_to edit_admin_post_path(post),
+    <%= link_to admin_post_path(post),
             data: {:confirm => 'Are you sure?'}, :method => :delete do %>
       <%= fa_icon "trash" %>
     <% end %>

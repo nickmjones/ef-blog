@@ -39,7 +39,7 @@ class Admin::PostsController < ApplicationController
   def destroy
     @post = Post.friendly.find(params[:id])
     @post.destroy
-    redirect_to admin_root_path, notice: "Post removed."
+    redirect_to admin_root_path, notice: "Post deleted."
   end
 
   private
