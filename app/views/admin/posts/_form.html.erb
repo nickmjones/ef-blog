@@ -15,7 +15,7 @@
       <div class="form-content__col--sideitem">
         <h6>Featured Image</h6>
         <% if @post.image.attached? %>
-          <%= image_tag @post.image.variant(resize: "320x240"), class: 'bordered' %>
+          <%= image_tag @post.image.service_url.variant(resize: "320x240"), class: 'bordered' %>
           <br/>
         <% end %>
         <%= f.input :image, label: false %>
