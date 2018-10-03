@@ -17,4 +17,13 @@ class Post < ApplicationRecord
   scope :is_published, -> { where("is_published = true") }
   scope :is_draft, -> { where("is_published = false") }
   scope :with_preloaded_image, -> { preload(image_attachment: :blob) }
+  
+  # reading time
+  def word_count
+    self.body.split.size
+  end
+
+  def reading_time
+    (word_count / 180.0).ceil
+  end
 end
