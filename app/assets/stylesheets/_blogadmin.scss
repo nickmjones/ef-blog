@@ -162,6 +162,10 @@ section.blogpost {
       width: 70%;
       padding-top: 0;
     }
+
+    ul li {
+      @extend p;
+    }
   }
 
   aside {
@@ -179,6 +183,7 @@ section.blogpost {
   position: relative;
   overflow: hidden;
   background: $color_hblue;
+  margin: -2rem -2rem 2rem -2rem;
 }
 
 .post-meta {

@@ -6,6 +6,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.friendly.find(params[:id])
+    respond_to do |format|
+      format.html {render :layout => 'post'}
+    end
   end
   
 end

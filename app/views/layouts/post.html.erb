@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Check In - the Event Farm Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <%= react_component "CompactHeader", img_src: image_url('https://ef-mktg-assets.s3.amazonaws.com/blog-logo.svg')%>
+    <div class="content">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
+  </body>
+</html>
