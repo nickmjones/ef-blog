@@ -16,4 +16,5 @@ class Post < ApplicationRecord
   # scopes
   scope :is_published, -> { where("is_published = true") }
   scope :is_draft, -> { where("is_published = false") }
+  scope :with_preloaded_image, -> { preload(image_attachment: :blob) }
 end
