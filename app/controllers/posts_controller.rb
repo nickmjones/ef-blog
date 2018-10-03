@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.with_preloaded_image.is_published.order('created_at DESC').limit(3)
+    @posts = Post.with_preloaded_image.is_published.order('created_at DESC').limit(5)
   end
 
   def show
