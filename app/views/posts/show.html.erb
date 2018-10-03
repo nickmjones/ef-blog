@@ -5,7 +5,7 @@
 <header class="post-header" role="heading">
   <!-- get featured image-->
   <% if @post.image.attached? %>
-    <%= image_tag @post.image.service_url, class: "post-header__image" %>
+    <%= image_tag @post.image, class: "post-header__image" %>
   <% end %>
 </header>
 
