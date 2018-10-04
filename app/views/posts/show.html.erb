@@ -18,12 +18,14 @@
       <h1>
         <%= @post.title %>
       </h1>
-      <h6>
-        <div class="tiny-avatar">
-          <%= image_tag get_author_avatar(@post.author_id, "48px") %>
+      <div class="attribution">
+        <div class="avatar">
+          <%= get_author_fullname(@post.author_id).split.map(&:first).join.upcase %>
         </div>
-        <%= get_author_fullname(@post.author_id) %> &mdash; <%= distance_of_time_in_words(@post.updated_at, Time.now).humanize %> ago
-      </h6>
+        <h6>
+          <%= get_author_fullname(@post.author_id) %>
+        </h6>
+      </div>
     </div>
     <%= markdown(@post.body).html_safe %>
   </article>

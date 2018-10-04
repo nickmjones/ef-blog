@@ -202,13 +202,16 @@ section.blogpost {
   h1 {
     line-height: 1;
     margin: 0 0 1rem;
+    @include for-phone-only {
+      font-size: 3.052rem;
+    }
   }
 
   h6 {
     font-size: 1rem;
-    line-height: 48px;
+    line-height: 2;
     color: transparentize($color_dkslate, .3);
-    margin: 1rem 0 3rem;
+    margin: 0 0 3rem;
   }
 }
 
@@ -219,13 +222,38 @@ section.blogpost {
   height: 100%;
 }
 
-.tiny-avatar {
+.avatar {
   width: 48px;
   height: 48px;
-  margin-right: 1rem;
-
+  text-align: center;
+  color: #fff;
+  line-height: 48px;
+  overflow: hidden;
+  background: $color_orange;
+  border-radius: 100px;
+  font-family: $header-book-font;
   img {
     border-radius: 100px;
+  }
+}
+
+.attribution {
+  display: flex;
+  height: 48px;
+  font-family: $header-book-font;
+
+  .avatar {
+    flex: 0 1 auto;
+    width: 48px;
+    overflow: hidden;
+    img {
+      border-radius: 100px;
+    }
+  }
+  h6 {
+    flex: 3;
+    line-height: 48px;
+    padding-left: 1rem;
   }
 }
 

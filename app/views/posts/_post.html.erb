@@ -9,7 +9,15 @@
       <%= post.created_at.stamp('July 1, 1999') %> &mdash; <%= post.reading_time %> Min Read
     </h6>
     <h2><%= link_to post.title, post_path(post) %></h2>
-    <h6><%= get_author_fullname(post.author_id) %></h6>
-    </h4>
+
+    <div class="attribution">
+      <div class="avatar avatar--inline">
+        <%= get_author_fullname(post.author_id).split.map(&:first).join.upcase %>
+      </div>
+      <h6>
+        <%= get_author_fullname(post.author_id) %>
+      </h6>
+    </div>
+
   </div>
 </div>
