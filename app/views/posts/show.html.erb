@@ -1,6 +1,6 @@
 <%= content_for :meta_title, @post.title %>
 <%= content_for :url, request.original_url %>
-<%= content_for :post_image, url_for(@post.image) %>
+<%= content_for :post_image, polymorphic_url(@post.image) %>
 <%= content_for :meta_description, @post.meta_desc %>
 <%= content_for :meta_keywords, "eventtech, event management, salesforce, pardot, cvent" %>
 
