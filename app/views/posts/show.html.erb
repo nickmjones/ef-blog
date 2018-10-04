@@ -1,6 +1,8 @@
 <%= content_for :meta_title, @post.title %>
+<%= content_for :url, request.original_url %>
+<%= content_for :post_image, @post.image %>
 <%= content_for :meta_description, @post.meta_desc %>
-<% content_for :meta_keywords, "eventtech, event management, salesforce, pardot, cvent" %>
+<%= content_for :meta_keywords, "eventtech, event management, salesforce, pardot, cvent" %>
 
 <header class="post-header" role="heading">
   <!-- get featured image-->
@@ -18,7 +20,7 @@
       </h1>
       <h6>
         <div class="tiny-avatar">
-          <%= image_tag get_author_avatar(@post.author_id, "32px") %>
+          <%= image_tag get_author_avatar(@post.author_id, "48px") %>
         </div>
         <%= get_author_fullname(@post.author_id) %> &mdash; <%= distance_of_time_in_words(@post.updated_at, Time.now).humanize %> ago
       </h6>

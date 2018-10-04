@@ -5,25 +5,29 @@ nav.compact-header {
   height: 4rem;
 
   .logo {
-    flex: 3;
+    flex: 2;
     img {
       height: 2rem;
     }
   }
   .links {
-    flex: 1;
-    align-self: flex-end;
-    margin: 0;
+    flex: 2;
+    margin: .5rem 0 0 0;
     padding: 0;
     height: 2rem;
     text-align: right;
+    @include for-phone-only {
+      display: none;
+    }
     li {
+      flex: 1;
+      line-height: .6;
       display: inline;
       margin-left: .8rem;
-      line-height: 2rem;
       color: #fff;
       font-family: 'Circular Pro Book', Helvetica, Arial, sans-serif;
       padding: 10px 16px;
+      text-align: center;
       a {
         color: #fff;
         text-decoration: none;

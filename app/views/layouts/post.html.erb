@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Check In - the Event Farm Blog</title>
+    <title><%= yield (:meta_title) %> | The Check In</title>
+    <%= render 'shared/ogtags' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KN8RTCD');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="description" content="<%= meta_description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
+  
 
   <body>
     <%= react_component "CompactHeader", img_src: image_url('https://ef-mktg-assets.s3.amazonaws.com/blog-logo.svg')%>
