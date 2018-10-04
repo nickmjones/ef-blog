@@ -17,6 +17,9 @@ nav.global {
     padding: 0;
     height: 2rem;
     text-align: right;
+    @include for-phone-only {
+      display: none;
+    }
     li {
       display: inline;
       margin-left: .8rem;
@@ -37,12 +40,15 @@ nav.global {
 }
 header.main {
   background: $color_hblue;
-  padding: 2rem 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   min-height: 50vh;
+
+  @include for-tablet-portrait-up {
+    padding: 2rem 8rem;
+  }
 
   .title {
     text-align: center;
