@@ -5,9 +5,7 @@
     <% end %>
   </div>
   <div class="post-grid__item--meta">
-    <h6>
-      <%= post.created_at.stamp('July 1, 1999') %> &mdash; <%= post.reading_time %> Min Read
-    </h6>
+    <h6><%= post.created_at.stamp('July 1, 1999') %> &mdash; <%= post.reading_time %> Min Read</h6>
     <h2><%= link_to post.title, post_path(post) %></h2>
 
     <div class="attribution">
