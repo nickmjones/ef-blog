@@ -2,6 +2,6 @@ class Author < ApplicationRecord
   has_many :posts, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  # :registerable <-- enable to allow sign ups
+  devise :database_authenticatable, :recoverable, :rememberable, :validatable
 end

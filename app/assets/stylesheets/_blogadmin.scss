@@ -207,7 +207,7 @@ section.blogpost {
   h6 {
     font-size: 1rem;
     line-height: 48px;
-    color: transparentize($color_hblue, .3);
+    color: transparentize($color_dkslate, .3);
     margin: 1rem 0 3rem;
   }
 }
@@ -222,11 +222,9 @@ section.blogpost {
 .tiny-avatar {
   width: 48px;
   height: 48px;
-  float: left;
   margin-right: 1rem;
 
   img {
-    border: 2px solid $color_hblue;
     border-radius: 100px;
   }
 }
