@@ -23,7 +23,7 @@
       </div>
       <div class="admin-nav__login">
         <% if author_signed_in? %>
-          <%= current_author.email %> <%= link_to 'Edit', edit_author_registration_path %> | <%= link_to('Logout', destroy_author_session_path, method: :delete) %>
+          <%= current_author.email %> | <%= link_to('Logout', destroy_author_session_path, method: :delete) %>
         <% end %>
       </div>
     </nav>
