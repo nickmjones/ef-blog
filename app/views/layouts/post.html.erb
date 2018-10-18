@@ -22,9 +22,9 @@
 
   <body>
     <%= react_component "CompactHeader", img_src: image_url('https://ef-mktg-assets.s3.amazonaws.com/blog-logo.svg')%>
-    <div class="content">
-      <%= yield %>
-    </div>
+    
+    <%= yield %>
+
     <%= render 'shared/footer' %>
   </body>
 </html>

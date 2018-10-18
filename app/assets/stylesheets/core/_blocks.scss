@@ -1,3 +1,7 @@
+.content {
+	max-width: 1200px;
+	margin: auto;
+}
 .banner {
 	width: 100%;
 	background: $color_dkblue;
@@ -148,5 +152,18 @@ dl.image-w-caption {
 	}
 	&:first-of-type {
 		margin-top: 0;
+	}
+}
+
+.pagination {
+	padding: 2rem;
+	max-width: 1200px;
+	margin: auto;
+	text-align: right;
+
+	a {
+		text-decoration: none;
+		font-family: $header-book-font;
+		font-size: 2.3rem;
 	}
 }

@@ -23,6 +23,7 @@ gem 'font-awesome-rails'
 gem 'pg_search'
 gem 'aws-sdk-s3'
 gem 'rails_12factor'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

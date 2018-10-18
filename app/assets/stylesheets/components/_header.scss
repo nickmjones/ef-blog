@@ -17,8 +17,9 @@ nav.global {
     padding: 0;
     height: 2rem;
     text-align: right;
-    @include for-phone-only {
-      display: none;
+    display: none;
+    @include for-desktop-up {
+      display: block;
     }
     li {
       display: inline;
@@ -44,7 +45,7 @@ header.main {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  min-height: 50vh;
+  min-height: 20vh;
 
   @include for-tablet-portrait-up {
     padding: 2rem 8rem;

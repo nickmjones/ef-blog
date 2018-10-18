@@ -1,4 +1,7 @@
 class Post < ApplicationRecord
+
+  paginates_per 5
+
   # associations
   belongs_to :author
 

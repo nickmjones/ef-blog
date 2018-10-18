@@ -11,29 +11,31 @@
   <% end %>
 </header>
 
-<section class="blogpost" role="article">
+<div class="content">
+  <section class="blogpost" role="article">
 
-  <article>
-    <div class="post-meta">
-      <h1>
-        <%= @post.title %>
-      </h1>
-      <div class="attribution">
-        <div class="avatar">
-          <%= get_author_fullname(@post.author_id).split.map(&:first).join.upcase %>
+    <article>
+      <div class="post-meta">
+        <h1>
+          <%= @post.title %>
+        </h1>
+        <div class="attribution">
+          <div class="avatar">
+            <%= get_author_fullname(@post.author_id).split.map(&:first).join.upcase %>
+          </div>
+          <h6>
+            <%= get_author_fullname(@post.author_id) %>
+          </h6>
         </div>
-        <h6>
-          <%= get_author_fullname(@post.author_id) %>
-        </h6>
       </div>
-    </div>
-    <%= markdown(@post.body).html_safe %>
-  </article>
+      <%= markdown(@post.body).html_safe %>
+    </article>
 
-  <aside>
-    <div class="three-up">
-      <h6 class="glance">About The Author</h6>
-      <%= get_author_shortbio(@post.author_id) %>
-    </div>
-  </aside>
-</section>
+    <aside>
+      <div class="three-up">
+        <h6 class="glance">About The Author</h6>
+        <%= get_author_shortbio(@post.author_id) %>
+      </div>
+    </aside>
+  </section>
+</div>

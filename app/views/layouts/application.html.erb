@@ -21,9 +21,9 @@
 
   <body>
     <%= react_component "Header", img_src: image_url('https://ef-mktg-assets.s3.amazonaws.com/EF_Horizontal_fff.svg') %>
-    <div class="content">
-      <%= yield %>
-    </div>
+    
+    <%= yield %>
+    
     <%= render 'shared/footer' %>
   </body>
 </html>
