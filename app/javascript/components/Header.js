@@ -6,12 +6,12 @@ class Header extends React.Component {
       <React.Fragment>
         <nav className="global">
           <div className="logo">
-            <a href="/">
+            <a href="https://www.eventfarm.com">
               <img src={this.props.img_src} />
             </a>
           </div>
           <ul className="links">
-            <li><a href="http://www.eventfarm.com">About Us</a></li>
+            <li><a href="https://blog.eventfarm.com/">Blog Home</a></li>
             <li className="special"><a href="http://www.eventfarm.com/request-a-demo">Request a Demo</a></li>
           </ul>
         </nav>
