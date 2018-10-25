@@ -259,31 +259,24 @@ section.blogpost {
 
 
 blockquote {
-  padding: 1rem 0;
-  color: $color_hblue;
-  font-size: 2rem;
-  line-height: 1.25;
-  quotes: "“""”""‘""’";
   position: relative;
-  border-radius: 20px;
+  margin: 6rem -4rem 4rem;
+  p {
+    font-size: 1.953rem;
+    color: $color_hblue;
+    font-family: $header-book-font;
+    line-height: 1.25;
+  }
 }
 
 blockquote:before {
-  content: open-quote;
-  font-size: 3rem;
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-  line-height: 1;
-}
-
-blockquote:after {
-  content: close-quote;
-  font-size: 3rem;
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-  line-height: 1;
+  content: "";
+  width: 120px;
+  height: 1px;
+  position: absolute;
+  top: -3rem;
+  left: 42%;
+  background: $color_hblue;
 }
 
 .post-grid {
