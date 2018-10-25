@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Quattrocento');
-$body-font: 'Quattrocento', Georgia, Times, serif;
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+$body-font: 'Merriweather', Georgia, Times, serif;
 $header-font: 'Circular-Pro-Medium', Helvetica, Arial, sans-serif;
 $header-book-font: 'Circular-Pro-Book', Helvetica, Arial, sans-serif;
 
@@ -10,46 +10,44 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.27;
-	margin-bottom: 1.5rem;
 	font-family: $header-book-font;
 	font-weight: lighter;
 }
 
 h1 {
 	font-size: 3.815rem;
-	line-height: 1.25 !important;
+	line-height: 1.15;
 	margin-bottom: 2rem;
 }
 h2 {
 	font-size: 3.052rem;
-	line-height: 1.15;
+	line-height: 1.25;
 	margin-bottom: 2rem;
 }
 h3 {
 	font-size: 2.441rem;
-	line-height: 1.15;
+	line-height: 1.25;
 	margin-bottom: 2rem;
 }
 h4 {
 	font-size: 1.953rem;
-	line-height: 1.15;
+	line-height: 1.25;
 	margin-bottom: 1rem;
 }
 h5 {
 	font-size: 1.563rem;
-	line-height: 1.15;
+	line-height: 1.25;
 	margin-bottom: 0.3rem;
 }
 h6 {
 	font-size: 1.25rem;
-	line-height: 1.15;
+	line-height: 1.25;
 	margin-bottom: 0.5rem;
 }
 
 p {
 	font-size: 1.15rem;
-	line-height: 1.45;
+	line-height: 1.75;
 	margin-bottom: 1rem;
 	color: #444;
 	quotes: "\201C" "\201D" "\2018" "\2019";
@@ -61,6 +59,10 @@ p.bio {
 	font-family: $header-book-font;
 	color: darken($color_slate, 25%);
 	font-size: .85rem;
+}
+
+p + h4 {
+	margin-top: 2rem;
 }
 
 strong {
@@ -213,40 +215,4 @@ ol.roman-inset {
 	li {
 		line-height: 1.45;
 	}
-}
-
-.severity {
-	background: #efefef;
-	padding: 2rem 2rem 1rem;
-	margin-bottom: 2rem;
-
-	p {
-		margin-bottom: 1rem;
-	}
-
-	ul {
-		margin: 0 0 1rem 2rem;
-		li {
-			line-height: 1.26;
-			list-style-type: disc;
-		}
-	}
-}
-
-table.generic {
-	width: 100%;
-	margin-bottom: 1rem;
-	td {
-		padding: 1rem;
-	}
-	tr:nth-child(odd) td {
-		background: $color_putty;
-	}
-}
-
-table.generic tbody tr th {
-	font-weight: bold;
-	padding: 1rem;
-	background: $color_green;
-	text-align: left;
 }

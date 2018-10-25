@@ -200,8 +200,6 @@ section.blogpost {
   }
 
   h1 {
-    line-height: 1;
-    margin: 0 0 1rem;
     @include for-phone-only {
       font-size: 3.052rem;
     }
