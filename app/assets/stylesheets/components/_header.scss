@@ -54,13 +54,15 @@ header.main {
   .title {
     text-align: center;
     color: lighten($color_hblue, 20%);
-    padding: 2rem;
+    padding: 2rem 1rem;
     h3 {
       font-weight: bold;
       font-size: 2rem;
     }
     h5 {
-      font-size: 1.5rem;
+      @include for-phone-only {
+        font-size: 1rem;
+      }
     }
   }
 }

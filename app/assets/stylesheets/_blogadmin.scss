@@ -199,12 +199,6 @@ section.blogpost {
     color: $color_hblue;
   }
 
-  h1 {
-    @include for-phone-only {
-      font-size: 3.052rem;
-    }
-  }
-
   h6 {
     font-size: 1rem;
     line-height: 2;
@@ -258,7 +252,10 @@ section.blogpost {
 
 blockquote {
   position: relative;
-  margin: 6rem -4rem 4rem;
+  margin: 3rem 0;
+  @include for-tablet-portrait-up {
+    margin: 6rem -4rem 4rem;
+  }
   p {
     font-size: 1.953rem;
     color: $color_hblue;
@@ -267,15 +264,6 @@ blockquote {
   }
 }
 
-blockquote:before {
-  content: "";
-  width: 120px;
-  height: 1px;
-  position: absolute;
-  top: -3rem;
-  left: 42%;
-  background: $color_hblue;
-}
 
 .post-grid {
   display: flex;
@@ -294,10 +282,6 @@ blockquote:before {
 
 .post-grid__item:first-child {
   width: 100%;
-
-  h2 {
-    font-size: 3rem;
-  }
 }
 
 .post-grid__item {
