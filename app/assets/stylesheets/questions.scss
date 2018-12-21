@@ -2,6 +2,11 @@ main.wrapper {
   width: 980px;
   margin: auto;
   padding-top: 2rem;
+
+  &--full {
+    width: 100%;
+    padding: 2rem;
+  }
 }
 .columns {
   display: flex;
@@ -49,4 +54,18 @@ main.wrapper {
   margin-top: 1rem;
   display: block;
   width: 100%;
+}
+
+.questions-table {
+  font-family: $header-book-font;
+  th {
+    text-align: left;
+    padding: 1rem;
+    font-family: $header-font;
+    border-bottom: 2px solid darken($color_putty, 40%);
+  }
+  td {
+    border-bottom: 1px solid darken($color_putty, 25%);
+    padding: 1rem;
+  }
 }

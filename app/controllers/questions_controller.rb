@@ -1,6 +1,9 @@
 class QuestionsController < ApplicationController
 
+  before_action :authenticate_author!, only: [:index]
+
   def index
+    @questions = Question.all
   end
 
   def new

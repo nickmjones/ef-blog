@@ -2,4 +2,19 @@
 <% content_for :meta_description, "Create killer event websites & email invitations. Check in guests. Integrate with in-event tech. All with Event Farm's registration platform." %>
 <% content_for :meta_keywords, "eventtech, event management, salesforce, pardot, cvent" %>
 
-<h1>Questions</h1>
+
+<main class="wrapper--full">
+  <h1>Questions</h1>
+  <table class="questions-table">
+    <tr>
+      <th>Subject</th>
+      <th>Question</th>
+    </tr>
+  <% @questions.each do |q| %>
+    <tr>
+      <td width="30%"><%= q.subject %></td>
+      <td><%= q.body %></td>
+    </tr>
+  <% end %>
+  </table>
+</main>
