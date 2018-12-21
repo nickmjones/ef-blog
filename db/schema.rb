@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_03_133015) do
+ActiveRecord::Schema.define(version: 2018_12_21_173517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,13 @@ ActiveRecord::Schema.define(version: 2018_10_03_133015) do
     t.bigint "author_id"
     t.boolean "is_published"
     t.index ["author_id"], name: "index_posts_on_author_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text "body"
+    t.string "subject"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "posts", "authors"

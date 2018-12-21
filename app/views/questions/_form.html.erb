@@ -1,0 +1,7 @@
+<div class="question_form">
+  <%= simple_form_for [@question] do |f| %>
+    <%= f.input :subject, label: "Subject", input_html: { placeholder: "e.g., How do I create an event series?" } %>
+    <%= f.input :body, label: "What's your question?", input_html: { rows: 10, placeholder: "Give a little more context..." } %>
+    <%= f.button :submit, input_html: { class: 'btn' } %>
+  <% end %>
+</div>
