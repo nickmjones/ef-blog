@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   resources :posts
   resources :questions, except: [:edit]
-  get "/thanks", to: 'questions#thanks'
+  get '/thanks', to: 'questions#thanks'
+  get '/questions/ask', to: 'questions#new'
 
   namespace :admin do
     resources :posts
