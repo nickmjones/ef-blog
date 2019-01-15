@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield (:meta_title) %> | The Check In</title>
-    <%= render 'shared/ogtags' %>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -12,6 +8,10 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KN8RTCD');</script>
     <!-- End Google Tag Manager -->
+    <title><%= yield (:meta_title) %> | The Check In</title>
+    <%= render 'shared/ogtags' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
     <meta name="description" content="<%= meta_description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -20,10 +20,14 @@
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN8RTCD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <%= react_component "Header", img_src: image_url('https://ef-mktg-assets.s3.amazonaws.com/EF_Horizontal_fff.svg') %>
-    
+
     <%= yield %>
-    
+
     <%= render 'shared/footer' %>
   </body>
 </html>
