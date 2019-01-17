@@ -154,6 +154,14 @@ section.blogpost {
     margin: auto;
   }
 
+  img {
+    width: 100%;
+
+    @include for-tablet-portrait-up {
+      width: 580px;
+    }
+  }
+
 
   article {
     flex: 0 1 auto;
@@ -167,6 +175,9 @@ section.blogpost {
     ul li,
     ol li {
       @extend p;
+    }
+    ol li {
+      list-style-type: decimal;
     }
 
   }
