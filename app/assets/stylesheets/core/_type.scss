@@ -1,75 +1,91 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
-$body-font: 'Merriweather', Georgia, Times, serif;
 $header-font: 'Circular-Pro-Medium', Helvetica, Arial, sans-serif;
 $header-book-font: 'Circular-Pro-Book', Helvetica, Arial, sans-serif;
+$header-bold-font: 'Circular-Pro-Bold', Helvetica, Arial, sans-serif;
+$body-font: $header-book-font;
+$system-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+"Droid Sans", "Helvetica Neue", sans-serif;
 
 
 body {
 	font-family: $body-font;
 	color: $color_dkslate;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $header-book-font;
-	font-weight: lighter;
+	font-family: $header-font;
+	font-weight: 500;
 }
 
 h1 {
 	font-size: 3.815rem;
-	line-height: 1.15;
+	line-height: 1;
 	margin-bottom: 2rem;
+	letter-spacing: -0.1rem;
 	@include for-phone-only {
-		font-size: 2.441rem;	
+		font-size: 2.441rem;
 	}
 }
 h2 {
 	font-size: 3.052rem;
-	line-height: 1.25;
-	margin-bottom: 2rem;
+	line-height: 1.18;
+	margin-bottom: 1rem;
+	letter-spacing: -0.1rem;
 }
 h3 {
 	font-size: 2.441rem;
-	line-height: 1.25;
-	margin-bottom: 2rem;
+	line-height: 1.18;
+	margin-bottom: 1rem;
+	letter-spacing: -0.1rem;
 }
 h4 {
 	font-size: 1.953rem;
-	line-height: 1.25;
-	margin-bottom: 1rem;
+	line-height: 1.18;
+	margin-bottom: .5rem;
+	letter-spacing: -0.03rem;
 }
 h5 {
 	font-size: 1.563rem;
 	line-height: 1.25;
-	margin-bottom: 0.3rem;
+	margin-bottom: 1rem;
+	letter-spacing: -0.06rem;
 }
 h6 {
 	font-size: 1.25rem;
-	line-height: 1.25;
-	margin-bottom: 0.5rem;
+	line-height: 1.45;
+	margin-bottom: .5rem;
 }
 
 p {
-	font-size: 1.15rem;
-	line-height: 1.75;
-	margin-bottom: 1rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 1rem 0;
 	color: #444;
 	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 p em {
 	font-style: italic;
 }
-p.bio {
-	font-family: $header-book-font;
-	color: darken($color_slate, 25%);
-	font-size: 1rem;
+
+p.sans {
+  font-family: $header-book-font;
+  line-height: 1.45;
+  color: lighten($color_dkblue, 25%);
 }
 
-p + h4 {
-	margin-top: 2rem;
+h3 + p {
+	margin-top: .5rem;
+	margin-bottom: 2rem;
 }
 
 strong {
 	font-weight: bold;
+}
+em {
+	font-style: italic;
 }
 
 dl {
@@ -118,7 +134,11 @@ dl {
 }
 
 .is-highlight {
-	background: transparentize($color_yellow, 0.3);
+	//background: transparentize($color_yellow, 0.5);
+	background-image: linear-gradient(-90deg, rgba(255,224,102,0.3), rgba(241,202,49,0.5) 95%, rgba(250,224,102,0.1));
+}
+.is-struck {
+	background: asset-url('strike.svg') center center repeat-x;
 }
 
 .is-breaking {
@@ -133,20 +153,6 @@ dl {
 	margin: 2rem 8rem;
 	@include for-phone-only {
 		margin: 2rem;
-	}
-}
-
-.has-underscore {
-	position: relative;
-	margin-bottom: 4rem;
-	&:after {
-		content: "";
-		position: absolute;
-		width: 60px;
-		height: 8px;
-		background: $color_green;
-		bottom: -2rem;
-		left: 0;
 	}
 }
 
@@ -171,15 +177,19 @@ hr {
 a {
 	color: $color_blue;
 	transition: color 0.15s ease-in-out;
+	text-decoration: none;
 	&:hover,
 	&:active {
 		color: $color_hblue;
+		border-bottom: 1px solid $color_hblue;
 	}
 	&:visited {
 		color: $color_blue;
+		border-bottom: 1px solid $color_blue;
 	}
 	&:visited:hover {
 		color: $color_hblue;
+		border-bottom: 1px solid $color_hblue;
 	}
 }
 
@@ -203,6 +213,14 @@ ul.features {
 	animation: typedjsBlink 0.7s infinite;
 }
 
+ul.tos {
+	margin: 1rem 0;
+}
+ul.tos li {
+	margin: 1.5rem;
+	line-height: 1.25;
+}
+
 // Legal
 
 ol.alpha {
@@ -218,4 +236,40 @@ ol.roman-inset {
 	li {
 		line-height: 1.45;
 	}
+}
+
+.severity {
+	background: #efefef;
+	padding: 2rem 2rem 1rem;
+	margin-bottom: 2rem;
+
+	p {
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		margin: 0 0 1rem 2rem;
+		li {
+			line-height: 1.26;
+			list-style-type: disc;
+		}
+	}
+}
+
+table.generic {
+	width: 100%;
+	margin-bottom: 1rem;
+	td {
+		padding: 1rem;
+	}
+	tr:nth-child(odd) td {
+		background: $color_putty;
+	}
+}
+
+table.generic tbody tr th {
+	font-weight: bold;
+	padding: 1rem;
+	background: $color_green;
+	text-align: left;
 }

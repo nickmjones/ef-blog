@@ -1,23 +1,25 @@
 nav.global {
   display: flex;
-  padding: 1rem;
-  background: $color_hblue;
-  height: 4rem;
+  height: 6rem;
+  padding: 0 2rem;
 
   .logo {
     flex: 3;
+    padding-top: 1rem;
     img {
-      height: 2rem;
+      height: 3.5rem;
     }
+
+  }
+  .logo a:hover {
+    border: 0;
   }
   .links {
-    flex: 1;
+    flex: 2;
     align-self: flex-end;
-    margin: 0;
-    padding: 0;
-    height: 2rem;
     text-align: right;
     display: none;
+    padding-bottom: 2rem;
     @include for-desktop-up {
       display: block;
     }
@@ -25,15 +27,15 @@ nav.global {
       display: inline;
       margin-left: .8rem;
       line-height: 2rem;
-      color: #fff;
+      color: $color_hblue;
       font-family: 'Circular Pro Book', Helvetica, Arial, sans-serif;
       padding: 10px 16px;
       a {
-        color: #fff;
+        color: $color_hblue;
         text-decoration: none;
       }
       &.special {
-        border: 2px solid transparentize(#fff, .5);
+        border: 2px solid $color_hblue;
         border-radius: 8px;
       }
     }

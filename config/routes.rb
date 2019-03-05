@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :questions, except: [:edit]
   get '/thanks', to: 'questions#thanks'
   get '/questions/ask', to: 'questions#new'
+  get '/subscribe', to: 'posts#subscribe'
 
   namespace :admin do
     resources :posts

@@ -2,6 +2,9 @@
 	max-width: 1200px;
 	margin: auto;
 }
+.content--centered {
+	max-width: 600px;
+}
 .banner {
 	width: 100%;
 	background: $color_dkblue;
@@ -155,15 +158,14 @@ dl.image-w-caption {
 	}
 }
 
-.pagination {
-	padding: 2rem;
-	max-width: 1200px;
-	margin: auto;
-	text-align: right;
 
-	a {
-		text-decoration: none;
-		font-family: $header-book-font;
-		font-size: 2.3rem;
-	}
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 80vw;
+  margin: 0 auto 2rem;
+	text-align: right;
+}
+.actions a:hover {
+	border: 0;
 }
