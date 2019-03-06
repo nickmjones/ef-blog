@@ -146,9 +146,9 @@ body.admin-root {
 // For posts
 section.blogpost {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
+
   @include for-tablet-portrait-up {
     width: 80%;
     margin: auto;
@@ -162,14 +162,24 @@ section.blogpost {
     }
   }
 
+  header {
+    width: 100%;
+    padding: 0 2rem;
+    order: 0;
+    @include for-tablet-portrait-up {
+      padding: 0 10rem 0 0;
+    }
+  }
 
   article {
-    flex: 0 1 auto;
     width: 100%;
+    padding: 0 2rem;
+    order: 2;
 
     @include for-tablet-portrait-up {
+      order: 1;
       width: 70%;
-      padding-top: 0;
+      padding: 0 2rem 0 0;
     }
 
     ul li,
@@ -183,12 +193,15 @@ section.blogpost {
   }
 
   aside {
-    display: none;
+    width: 100%;
+    padding: 1rem 2rem;
+    order: 1;
 
     @include for-tablet-portrait-up {
       display: block;
       width: 30%;
-      padding: 0 0 0 2rem;
+      order: 2;
+      padding: 0;
     }
   }
 }
@@ -240,29 +253,28 @@ section.blogpost {
   background: $color_orange;
   border-radius: 100px;
   font-family: $header-book-font;
+  float: left;
   img {
     border-radius: 100px;
   }
 }
 
 .attribution {
-  display: flex;
   height: 48px;
   font-family: $header-book-font;
   color: $color_slate;
 
   .avatar {
-    flex: 0 1 auto;
     width: 48px;
     overflow: hidden;
+    float: left;
+    margin-right: 1rem;
     img {
       border-radius: 100px;
     }
   }
   h6 {
-    flex: 3;
     line-height: 48px;
-    padding-left: 1rem;
   }
 }
 

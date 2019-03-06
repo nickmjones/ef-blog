@@ -13,12 +13,20 @@
 
 <div class="content">
   <section class="blogpost" role="article">
-
-    <article>
+    <header>
       <div class="post-meta">
         <h1>
           <%= @post.title %>
         </h1>
+      </div>
+    </header>
+
+    <article>
+      <%= markdown(@post.body).html_safe %>
+    </article>
+
+    <aside>
+      <div class="three-up">
         <div class="attribution">
           <div class="avatar">
             <%= get_author_fullname(@post.author_id).split.map(&:first).join.upcase %>
@@ -26,18 +34,12 @@
           <h6>
             <%= get_author_fullname(@post.author_id) %>
           </h6>
+          <p class="bio"><%= get_author_shortbio(@post.author_id) %></p>
         </div>
       </div>
-      <%= markdown(@post.body).html_safe %>
-    </article>
+    </aside>
 
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c7ef4f86d531bca"></script>
 
-    <aside>
-      <div class="three-up">
-        <h6 class="glance">About The Author</h6>
-        <p class="bio"><%= get_author_shortbio(@post.author_id) %></p>
-      </div>
-    </aside>
   </section>
 </div>

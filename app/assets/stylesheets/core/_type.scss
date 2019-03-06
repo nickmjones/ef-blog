@@ -69,6 +69,11 @@ p {
 p em {
 	font-style: italic;
 }
+p.bio {
+	color: $color_slate;
+	font-size: .9rem;
+	line-height: 1.25;
+}
 
 p.sans {
   font-family: $header-book-font;
