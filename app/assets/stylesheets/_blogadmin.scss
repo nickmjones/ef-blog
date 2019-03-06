@@ -197,6 +197,7 @@ section.blogpost {
     width: 100%;
     padding: 1rem 2rem;
     order: 1;
+    border: 1px dashed red;
 
     @include for-tablet-portrait-up {
       display: block;
@@ -261,7 +262,6 @@ section.blogpost {
 }
 
 .attribution {
-  height: 48px;
   font-family: $header-book-font;
   color: $color_slate;
 

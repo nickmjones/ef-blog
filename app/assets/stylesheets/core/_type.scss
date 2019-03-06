@@ -73,6 +73,10 @@ p.bio {
 	color: $color_slate;
 	font-size: .9rem;
 	line-height: 1.25;
+	display: none;
+	@include for-tablet-portrait-up {
+		display: block;
+	}
 }
 p.caption {
 	font-size: .8rem;
