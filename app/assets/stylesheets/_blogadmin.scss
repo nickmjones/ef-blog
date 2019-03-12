@@ -191,7 +191,10 @@ section.blogpost {
       list-style-type: decimal;
     }
     li {
-      list-style-type: circle;
+      list-style-type: disc;
+    }
+    ul {
+      margin-left: 2rem;
     }
 
   }
