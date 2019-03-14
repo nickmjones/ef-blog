@@ -168,6 +168,9 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    keen (1.1.1)
+      addressable (~> 2.5)
+      multi_json (~> 1.12)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -354,6 +357,7 @@ DEPENDENCIES
   guard-sass
   jbuilder (~> 2.5)
   kaminari
+  keen
   listen (>= 3.0.5, < 3.2)
   mini_magick (~> 4.8)
   pg (>= 0.18, < 2.0)
@@ -379,4 +383,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.3
+   1.17.1
