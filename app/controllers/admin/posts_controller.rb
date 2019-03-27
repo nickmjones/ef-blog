@@ -49,7 +49,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :meta_desc, :meta_keys, :slug, :search, :image, :author_id, :is_published)
+    params.require(:post).permit(:title, :body, :meta_desc, :meta_keys, :slug, :search, :image, :author_id, :is_published, :is_included_in_index)
   end
   
 end

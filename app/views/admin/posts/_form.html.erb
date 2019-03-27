@@ -9,7 +9,10 @@
 
       <div class="form-content__col--sideitem">
         <h6>Post Status</h6>
-        <%= f.input :is_published, as: :radio_buttons, label: "Make public? " %>
+        <p>Make this post public?</p>
+        <%= f.input :is_published, as: :radio_buttons, label: "" %>
+        <p>Show this post on the homepage?</p>
+        <%= f.input :is_included_in_index, as: :radio_buttons, label: "" %>
       </div>
 
       <div class="form-content__col--sideitem">

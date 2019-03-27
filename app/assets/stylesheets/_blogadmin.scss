@@ -78,7 +78,6 @@ body.admin-root {
       }
 
       label {
-        font-size: .7rem;
         font-family: 'Circular Pro Book', Helvetica, Arial, sans-serif;
       }
 
@@ -101,6 +100,10 @@ body.admin-root {
       input[type=text] {
         margin-bottom: 1rem;
         font-family: 'Circular Pro Book', Helvetica, Arial, sans-serif;
+      }
+
+      input[type=radio]{
+        margin: 0 .5rem 0 .3rem;
       }
 
       textarea.post-body {
