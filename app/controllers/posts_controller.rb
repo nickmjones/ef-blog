@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def customer
-    @posts = Post.with_preloaded_image.is_published.is_not_included_in_index.order('created_at DESC').limit(5).page params[:page]
+    @posts = Post.with_preloaded_image.is_published.is_hidden_in_index.order('created_at DESC').limit(5).page params[:page]
   end
 
   def show
@@ -14,5 +14,5 @@ class PostsController < ApplicationController
       format.html {render :layout => 'post'}
     end
   end
-  
+
 end

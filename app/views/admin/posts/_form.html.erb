@@ -9,10 +9,16 @@
 
       <div class="form-content__col--sideitem">
         <h6>Post Status</h6>
-        <p>Make this post public?</p>
-        <%= f.input :is_published, as: :radio_buttons, label: "" %>
-        <p>Show this post on the homepage?</p>
-        <%= f.input :is_included_in_index, as: :radio_buttons, label: "" %>
+        <p>
+          <%= f.input :is_published, label: "Publish", as: :boolean do %>
+            <%= f.check_box :is_published, {}, "true", "false" %>
+          <% end %>
+        </p>
+        <p>
+          <%= f.input :is_included_in_index, label: "Show on homepage", as: :boolean do %>
+            <%= f.check_box :is_included_in_index, {}, "true", "false" %>
+          <% end %>
+        </p>
       </div>
 
       <div class="form-content__col--sideitem">

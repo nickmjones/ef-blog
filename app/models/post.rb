@@ -21,8 +21,8 @@ class Post < ApplicationRecord
   scope :is_draft,                  -> { where("is_published = false") }
   scope :with_preloaded_image,      -> { preload(image_attachment: :blob) }
   scope :is_included_in_index,      -> { where("is_included_in_index = true") }
-  scope :is_not_included_in_index,  -> { where("is_included_in_index = false") }
-  
+  scope :is_hidden_in_index,  -> { where("is_included_in_index = false") }
+
   # reading time
   def word_count
     self.body.split.size
