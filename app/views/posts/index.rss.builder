@@ -9,6 +9,9 @@ xml.rss :version => "2.0" do
       xml.item do
         xml.title post.title
         xml.description post.body
+        if post.image.attached?
+          image_tag post.image
+        end
         xml.pubDate post.created_at.to_s(:rfc822)
         xml.link post_url(post)
         xml.guid post_url(post)
