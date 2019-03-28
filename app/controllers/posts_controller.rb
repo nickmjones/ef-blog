@@ -2,6 +2,10 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.with_preloaded_image.is_published.is_included_in_index.order('created_at DESC').limit(5).page params[:page]
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false }
+    end
   end
 
   def customer
