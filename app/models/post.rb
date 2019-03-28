@@ -17,10 +17,11 @@ class Post < ApplicationRecord
   has_one_attached :image
 
   # scopes
-  scope :is_published, -> { where("is_published = true") }
-  scope :is_draft, -> { where("is_published = false") }
-  scope :with_preloaded_image, -> { preload(image_attachment: :blob) }
-  scope :is_included_in_index, -> { where("is_included_in_index = true") }
+  scope :is_published,              -> { where("is_published = true") }
+  scope :is_draft,                  -> { where("is_published = false") }
+  scope :with_preloaded_image,      -> { preload(image_attachment: :blob) }
+  scope :is_included_in_index,      -> { where("is_included_in_index = true") }
+  scope :is_not_included_in_index,  -> { where("is_included_in_index = false") }
   
   # reading time
   def word_count

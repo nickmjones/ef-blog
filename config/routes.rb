@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/thanks', to: 'questions#thanks'
   get '/questions/ask', to: 'questions#new'
   get '/subscribe', to: 'posts#subscribe'
+  get '/customer', to: 'posts#customer'
 
   namespace :admin do
     resources :posts

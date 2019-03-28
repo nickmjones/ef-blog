@@ -1,0 +1,17 @@
+<% content_for :meta_title, "Customer Support" %>
+<% content_for :meta_description, "Create killer event websites & email invitations. Check in guests. Integrate with in-event tech. All with Event Farm's registration platform." %>
+<% content_for :meta_keywords, "eventtech, event management, salesforce, pardot, cvent" %>
+
+<div class="content">
+  <div class="post-grid">
+    <% if !@posts.empty? %>
+      <%= render @posts %>
+    <% else %>
+      Sorry, no posts.
+    <% end %>
+  </div>
+</div>
+
+<div class="actions">
+  <%= link_to_next_page @posts, raw("Read More &rarr;") %>
+</div>

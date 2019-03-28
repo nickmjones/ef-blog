@@ -4,6 +4,10 @@ class PostsController < ApplicationController
     @posts = Post.with_preloaded_image.is_published.is_included_in_index.order('created_at DESC').limit(5).page params[:page]
   end
 
+  def customer
+    @posts = Post.with_preloaded_image.is_published.is_not_included_in_index.order('created_at DESC').limit(5).page params[:page]
+  end
+
   def show
     @post = Post.friendly.find(params[:id])
     respond_to do |format|

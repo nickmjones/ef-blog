@@ -21,6 +21,10 @@ body.admin-root {
     }
   }
 
+  .messages {
+    display: none;
+  }
+
   .admin-shell {
     display: flex;
     flex-flow: row wrap;
