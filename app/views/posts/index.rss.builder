@@ -8,7 +8,8 @@ xml.rss :version => "2.0" do
     @posts.each do |post|
       xml.item do
         xml.title post.title
-        xml.description post.body
+        xml.description post.meta_desc
+        xml.body markdown(post.body).html_safe
         if post.image.attached?
           image_tag post.image
         end
